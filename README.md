@@ -1,71 +1,38 @@
-# Getting Started with Create React App
+# What is Embedding? Generating Embedding using Supabase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+- [Introduction](#introduction)
+- [Word Embedding](#word-embedding)
+- [Use Case of Embedding](#use-case-of-embedding)
+- [Generating Embedding using Supabase](#generating-embedding-using-supabase)
+- [Testing the Application](#testing-the-application)
+- [Conclusion](#conclusion)
 
-## Available Scripts
+## Introduction
+Natural Language Processing (NLP) is the process by which machines try to understand, interpret, and generate meaningful human language. NLP models like ChatGPT use text-generating models to process language, as machines cannot understand direct human language. The rise of NLP is likely to continue in the future, leading to improved responses and applications.
 
-In the project directory, you can run:
+## Word Embedding
+Word embedding is a technique that represents words as multidimensional vectors in continuous vector space. These vectors capture the relationship between words based on their context in a large corpus of text. Embeddings have become fundamental in NLP models, enhancing performance in various tasks.
 
-### `npm start`
+## Use Case of Embedding
+Embeddings have several use cases, including:
+- Semantic Understanding: Encoding semantic relationships between words for tasks like synonym identification and word analogy.
+- Sentiment Analysis: Understanding the emotional value of words and sentences.
+- Language Translation: Facilitating translation between languages.
+- Information Retrieval: Improving search engines by understanding semantic similarity between user queries and documents.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Generating Embedding using Supabase
+Supabase is a backend-as-a-service platform that allows developers to build scalable web applications with serverless functions and a PostgreSQL database. It recently introduced support for transformers.js, enabling the creation of embeddings in its edge functions. This support is available in the edge function of Supabase, which runs serverless functions in a demo environment.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Testing the Application
+To test the application, follow these steps:
+1. Set up your project on the Supabase dashboard.
+2. Create a React application that sends requests to the edge function to convert text into embedding.
+3. Use the Supabase CLI to manage the creation, running, and deployment of the edge function.
+4. Write the edge function in TypeScript, utilizing transformers.js to generate embeddings and store them in the Supabase database.
 
-### `npm test`
+## Conclusion
+Word embeddings are powerful tools in NLP that encode semantic relationships between words, enabling various language processing tasks. Supabase's support for transformers.js in its edge functions allows for the generation and storage of embeddings, making it a valuable addition to any NLP project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For more detailed instructions and code samples, please refer to the full project documentation.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# convert-given-text-into-embedding
