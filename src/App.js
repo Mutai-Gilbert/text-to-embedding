@@ -1,12 +1,9 @@
-
+import Input from "./components/InputSearch";
 
 function App(){
-    const [count, setCount] = useState(0);
-
-
     return (
         <>
-
+        <Input />
         </>
     )
 };
