@@ -1,6 +1,6 @@
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts'
 import { env, pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.5.0'
-import corsHeader from "../_shared/cors.ts"
+import { corsHeader } from "../_shared/cors.ts"
 
 // Configuration for Deno runtime
 env.useBrowserCache = false;
