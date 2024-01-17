@@ -1,6 +1,6 @@
-import { serve } from 'https://deno.land/std@0.168.0/http/server.ts'
-import { env, pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.5.0'
-import { corsHeader } from "../_shared/cors.ts"
+import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
+import { env, pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.5.0';
+import { corsHeader } from "../_shared/cors.ts";
 
 // Configuration for Deno runtime
 env.useBrowserCache = false;
@@ -8,16 +8,15 @@ env.allowLocalModels = false;
 
 const pipe = await pipeline(
   'feature-extraction',
-  'Supabase/gte-small',
+  'Supabase/gte-small'
 );
 
 serve(async (req) => {
-    
-    if (req.method == "OPTIONS"){
-        return new Response("ok", { headers: corsHeader})
-    };
+  if (req.method === "OPTIONS") {
+    return new Response("ok", { headers: corsHeader });
+  }
 
-    // Extract input string from JSON body
+  // Extract input string from JSON body
   const { input } = await req.json();
 
   // Generate the embedding from the user input
@@ -35,6 +34,7 @@ serve(async (req) => {
     { headers: { ...corsHeader, 'Content-Type': 'application/json' } }
   );
 });
+
 
 /* To invoke locally:
 
